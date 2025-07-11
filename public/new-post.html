@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Placeholder Form</title>
+    <style>
+        body {
+            background-color: #2d2d21;
+            font-family: Arial, sans-serif;
+            margin: 2em;
+        }
+
+        form {
+            margin: auto;
+            padding: 10px;
+            background-color: beige;
+            max-width: 400px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 1px 0 0 black;
+        }
+
+        label {
+            display: block;
+            margin-top: 1em;
+        }
+
+        input,
+        textarea {
+            border: 1px solid #2d2d21;
+            border-radius: 5px;
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.3em;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 1em;
+            padding: 0.6em 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Submit a Post</h1>
+
+    <form action="/api/post/new" method="POST" name="Kutte-ka-bacha">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" placeholder="Enter the title" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" placeholder="Enter the description" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
