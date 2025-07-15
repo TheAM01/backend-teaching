@@ -1,19 +1,17 @@
-import dns from 'node:dns';
-dns.setDefaultResultOrder('ipv4first');
+function get1(endpoint, callbackFn) {
+    // do something with endpoint
 
-
-
-
-const response = await fetch('http://localhost:2000/api/post/delete/686faba569ec379204005b27', {
-    method: 'DELETE',
-    headers: {
-        'Content-Type': 'application/json'
-    }
-});
-
-if (!response.ok) {
-    throw new Error(`Failed to delete item: ${response.status}`);
+    // after everything is done
+    callbackFn(req, res)
 }
 
-const data = await response.json();
-console.log('Deleted:', data);
+get1("/", (req, res) => {
+    req.console.log();
+    res.send(smth)
+    
+})
+
+function cbf(req, res) {
+    // req ke sath,uch kro
+    // res ke sath smth
+}

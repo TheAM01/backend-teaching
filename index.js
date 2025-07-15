@@ -12,6 +12,11 @@ const dir = path.resolve();
 
 // MIDDLEWARE
 
+app.use("/new-post", (req, res, next) => {
+    console.log(`Request received on (/new-post) at: ${new Date()}`);
+    next()
+})
+
 app.use(
     express.json()
 );
@@ -64,6 +69,24 @@ app.get("/api/post/:id", async (req, res) => {
     }
 
 });
+
+// PATCH
+
+app.patch("/api/post/:id", async (req, res) => {
+
+    const description = req.body.description;
+    const id = req.params.id;
+
+    const posts = db.collection("posts");
+    await posts.updateOne(
+        { _id: new ObjectId(id) },
+        {
+            $set: {
+                description: description,
+            }
+        }
+    )
+})
 
 
 // POST ROUTES BELOW
