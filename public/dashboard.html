@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log In</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            /* colours (from the docs example) */
+            --color-clifford: #da373d;
+
+            /* fonts */
+            --font-primary: "Space Grotesk", sans-serif;
+            --font-code: "Space Mono", monospace;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col p-10 bg-black font-primary h-screen w-screen justify-center items-center gap-6">
+<div class="flex flex-row w-200 gap-6">
+    
+    <div class="flex bg-zinc-900 border border-zinc-800 w-50 flex-col p-2">
+        <div class="flex p-2 text-lg font-bold text-white">Sidebar</div>
+        <div class="p-2 text-sm text-zinc-500 cursor-pointer hover:bg-zinc-600 hover:text-white duration-200">Lorem</div>
+        <div class="p-2 text-sm text-zinc-500 cursor-pointer hover:bg-zinc-600 hover:text-white duration-200">Ipsum</div>
+        <div class="p-2 text-sm text-zinc-500 cursor-pointer hover:bg-zinc-600 hover:text-white duration-200">Dolor</div>
+        <div class="p-2 text-sm text-zinc-500 cursor-pointer hover:bg-zinc-600 hover:text-white duration-200">Sit</div>
+        <div class="p-2 text-sm text-zinc-500 cursor-pointer hover:bg-zinc-600 hover:text-white duration-200">Amet</div>
+    </div>
+
+    <div class="flex flex-col gap-6">
+        <div class="flex flex-row p-5 bg-zinc-900 border border-zinc-800 text-sm  items-center w-150">
+            <div class="text-white mr-1">Endpoint:</div>
+            <div class="text-gray-600 py-1 px-0.5 hover:bg-gray-800 hover:text-gray-500 font-semibold rounded-sm cursor-pointer">/dashboard</div>
+        </div>
+
+        <div class="flex flex-col p-5 bg-zinc-900 text-white gap-4 border border-zinc-800 w-150">
+
+            <div class="flex text-2xl font-bold">Dashboard</div>
+
+            <div class="text-zinc-600 bg-black border border-zinc-800 p-2 text-sm font-code">[placeholder actions]</div>
+            <div class="text-zinc-600 bg-black border border-zinc-800 p-2 text-sm font-code">[placeholder actions]</div>
+            <div class="text-zinc-600 bg-black border border-zinc-800 p-2 text-sm font-code">[placeholder actions]</div>
+            <div class="text-zinc-600 bg-black border border-zinc-800 p-2 text-sm font-code">[placeholder actions]</div>
+
+
+        </div>
+    </div>
+    
+</div>
+
+
+
+</body>
+</html>

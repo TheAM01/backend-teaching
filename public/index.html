@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Links Page</title>
-  <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Links Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            /* colours (from the docs example) */
+            --color-clifford: #da373d;
+
+            /* fonts */
+            --font-primary: "Space Grotesk", sans-serif;
+            --font-code: "Space Mono", monospace;
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Useful Links</h1>
-    <div class="links">
-      <a href="/dashboard">Dashboard</a>
-      <a href="/api/todos">To dos</a>
-      <a href="/new-post">Create Post</a>
-      <a href="/albums">Albums</a>
+<body class="flex flex-col p-10 bg-black font-primary h-screen w-screen justify-center items-center gap-6">
+
+    <div class="flex flex-row p-5 bg-zinc-900 border border-zinc-800 text-sm items-center w-150">
+        <div class="text-white mr-1">Endpoint:</div>
+        <div class="text-gray-600 py-1 px-0.5 hover:bg-gray-800 hover:text-gray-500 font-semibold rounded-sm cursor-pointer">/</div>
     </div>
-    <div class="footer">© 2025 Placeholder Inc.</div>
-  </div>
+
+    <div class="flex flex-col p-5 bg-zinc-900 text-white gap-4 border border-zinc-800 w-150">
+
+        <div class="flex text-2xl font-bold ">Frontend Links</div>
+        <div class="flex flex-row gap-4">
+            <a href="/" class="bg-black text-zinc-500 p-3 text-sm hover:text-white duration-150 " >Home</a>
+            <a href="/new-post" class="bg-black text-zinc-500 p-3 text-sm hover:text-white duration-150 " >New Post</a>
+            <div href="/new-post" class="bg-zinc-800 text-zinc-900 text-white p-3 text-sm cursor-not-allowed" >[empty]</div>
+            <div href="/albums" class="bg-zinc-800 text-zinc-900 text-white p-3 text-sm cursor-not-allowed" >[empty]</div>
+        </div>
+
+        <div class="w-full border-b border-zinc-800"></div>
+
+        <div class="flex text-2xl font-bold ">API Links</div>
+        <div class="flex flex-row gap-4">
+            <a href="/api/posts/all" class="bg-black text-zinc-500 p-3 text-sm hover:text-white duration-150 " >All Posts</a>
+            <a href="/api/post/12345678912" class="bg-black text-zinc-500 p-3 text-sm hover:text-white duration-150 " >Post with ID</a>
+            <div href="/new-post" class="bg-zinc-800 text-zinc-900 text-white p-3 text-sm cursor-not-allowed" >[empty]</div>
+            <div href="/albums" class="bg-zinc-800 text-zinc-900 text-white p-3 text-sm cursor-not-allowed" >[empty]</div>
+        </div>
+
+        <div class="w-full border-b border-zinc-800"></div>
+
+        <div class="footer">© 2025 Solid Pixel Inc.</div>
+
+    </div>
+
 </body>
 </html>
